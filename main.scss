@@ -5,7 +5,122 @@ $white-light: #ffffff;
 $white-dark: #f8f9f9;
 $beige-normal: #ece0ce;
 
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0 auto;
+  max-width: 130rem;
   background-color: $green-light;
-  color: white;
+  color: $white-light;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  width: 95%;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+  }
+  &__item {
+    padding: 1rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: $white-light;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  &__link::before {
+    content: "";
+    position: absolute;
+    background-color: $white-light;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    transition: all 0.7s;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: $white-light;
+    transition: all 0.5s;
+  }
+
+  &__link:hover::before {
+    left: 0;
+  }
+  &__link:hover::after {
+    right: 0;
+  }
+
+  &__animation::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background-color: $white-light;
+    transition: all 0.5s;
+  }
+
+  &__link:hover &__animation::before {
+    top: 0;
+  }
+  &__animation::after {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: $white-light;
+    transition: all 0.5s;
+  }
+
+  &__link:hover &__animation::after {
+    bottom: 0;
+  }
+
+  &__button {
+    display: inline-block;
+    margin-left: 5rem;
+    background-color: $beige-normal;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 900;
+    color: $green-darrkest;
+  }
 }

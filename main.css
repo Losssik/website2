@@ -1,5 +1,136 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
+  margin: 0 auto;
+  max-width: 130rem;
   background-color: #587052;
-  color: white;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15rem;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  width: 95%;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+}
+
+.header__item {
+  padding: 1rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header__link:link, .header__link:visited {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header__link::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.header__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__link:hover::before {
+  left: 0;
+}
+
+.header__link:hover::after {
+  right: 0;
+}
+
+.header__animation::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__link:hover .header__animation::before {
+  top: 0;
+}
+
+.header__animation::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__link:hover .header__animation::after {
+  bottom: 0;
+}
+
+.header__button {
+  display: inline-block;
+  margin-left: 5rem;
+  background-color: #ece0ce;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 900;
+  color: #03363d;
 }
 /*# sourceMappingURL=main.css.map */

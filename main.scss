@@ -21,11 +21,28 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 130rem;
+
   background-color: $green-light;
   color: $white-light;
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: $green-darrkest;
+  border-bottom: 1px solid $green-darrkest;
+}
+
+.grid {
+  display: grid;
+
+  &-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 .button {
@@ -55,6 +72,8 @@ body {
   gap: 15rem;
   margin-top: 3rem;
   font-size: 1.8rem;
+  max-width: 100vw;
+  padding: 1rem 8rem;
 
   &__list {
     display: flex;
@@ -137,9 +156,10 @@ body {
 .hero {
   margin-top: 8rem;
   display: flex;
-  gap: 15rem;
-  margin-left: 2rem;
+  gap: 2rem;
   letter-spacing: 2px;
+  max-width: 100vw;
+  padding: 2rem 8rem;
 
   &__tittle {
     border-bottom: 1px solid white;
@@ -164,5 +184,47 @@ body {
 
   &__image {
     min-width: 100%;
+  }
+}
+
+.feature {
+  background-color: $white-light;
+  max-width: 100vw;
+  padding: 15rem 8rem;
+
+  &__subtittle {
+    color: $green-darrkest;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__tittle {
+    color: $green-darrkest;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 6rem;
+    margin-top: 1rem;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__logo {
+    font-size: 8rem;
+    color: $green-darrkest;
+  }
+
+  &__heading {
+    color: $green-darrkest;
+  }
+
+  &__text {
+    text-align: center;
+    color: $green-darrkest;
+    line-height: 1.7;
   }
 }

@@ -15,6 +15,7 @@ html {
 
 body {
   margin: 0 auto;
+  overflow-x: hidden;
   background-color: #587052;
   color: #ffffff;
   font-family: "Lato", sans-serif;
@@ -262,5 +263,53 @@ a {
   text-align: center;
   color: #03363d;
   line-height: 1.7;
+}
+
+.work {
+  height: 80vh;
+  max-width: 100%;
+  background-image: url("photo2.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.work__container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 5rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #03363d;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+}
+
+.work__header {
+  font-size: 3rem;
+}
+
+.work__paragraph {
+  line-height: 1.7;
+}
+
+.work__link {
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=main.css.map */

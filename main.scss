@@ -21,7 +21,7 @@ html {
 
 body {
   margin: 0 auto;
-
+  overflow-x: hidden;
   background-color: $green-light;
   color: $white-light;
   font-family: "Lato", sans-serif;
@@ -226,5 +226,39 @@ a {
     text-align: center;
     color: $green-darrkest;
     line-height: 1.7;
+  }
+}
+
+.work {
+  height: 80vh;
+  max-width: 100%;
+  background-image: url("photo2.jpg");
+  background-size: cover;
+  position: relative;
+  &__container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white-light;
+    color: $green-darrkest;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+  }
+
+  &__header {
+    font-size: 3rem;
+  }
+  &__paragraph {
+    line-height: 1.7;
+  }
+  &__link {
+    margin-top: 2rem;
   }
 }

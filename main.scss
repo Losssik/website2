@@ -262,3 +262,44 @@ a {
     margin-top: 2rem;
   }
 }
+
+.operations__tab-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.operations__content {
+  display: none;
+  &--active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: 1.5s fadein;
+  }
+}
+
+.operations__header {
+  color: red;
+  font-size: 3rem;
+}
+
+.operations__tab {
+  margin-right: 2.5rem;
+  transform: translateY(-50%);
+}
+//buttons lower
+.operations__tab--active {
+  transform: translateY(-66%);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

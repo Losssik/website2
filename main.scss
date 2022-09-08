@@ -55,6 +55,19 @@ a {
   color: $green-darrkest;
 }
 
+.btn {
+  padding: 1rem 3rem;
+  border: none;
+  color: $green-dark;
+  background-color: $white-dark;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+  margin-left: 2rem;
+}
+
 .button-hero-contact {
   margin-right: 3rem;
   border: 3px solid $beige-normal;
@@ -263,26 +276,41 @@ a {
   }
 }
 
+.operations {
+  background-color: $white-dark;
+  padding: 5rem 20rem;
+  line-height: 1.6;
+}
+
 .operations__tab-container {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  padding-top: 4rem;
+  background-color: $white-dark;
 }
 
 .operations__content {
   display: none;
+  padding: 5rem;
+  text-align: center;
   &--active {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: 1.5s fadein;
+    gap: 2rem;
+    animation: 1s fadein;
   }
 }
 
 .operations__header {
-  color: red;
+  color: $green-darrkest;
   font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.operations__text {
+  color: $green-darrkest;
 }
 
 .operations__tab {
@@ -292,6 +320,14 @@ a {
 //buttons lower
 .operations__tab--active {
   transform: translateY(-66%);
+  transition: all 0.5s ease;
+  background-color: $green-light;
+  color: $white-light;
+  
+
+  & span {
+    color: $green-darrkest;
+  }
 }
 
 @keyframes fadein {
@@ -302,4 +338,19 @@ a {
   to {
     opacity: 1;
   }
+}
+.circle{
+  margin-right: 1rem;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  background-color: #26f006;
+  top: 7px;
+  left: 23px;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  z-index: -1;
 }

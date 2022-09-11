@@ -470,3 +470,68 @@ a {
     object-fit: cover;
   }
 }
+
+.contact {
+  background-color: $white-dark;
+  color: $green-darrkest;
+  padding: 6rem 2rem;
+
+  &__box {
+    font-size: 1.3rem;
+  }
+
+  &__header {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__subheading {
+    margin-bottom: 5rem;
+  }
+
+  &__info {
+    padding-right: 3rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: #26f006;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+  }
+  &__fieldset {
+    display: inline-block;
+    border: none;
+    background-color: red;
+
+    & input {
+      padding: 2rem;
+      text-align: left;
+      background-color: yellow;
+      border: none;
+    }
+  }
+}
+
+.tescik {
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+}

@@ -238,6 +238,82 @@
         </figure>
       </div>
     </section>
+
+    <section class="contact">
+      <div class="contact__container">
+        <div class="contact__info">
+          <h3 class="contact__header">Let's get in touch</h3>
+          <p class="contact__subheading">
+            We're open for any suggestion or just to have a chat
+          </p>
+          <div class="contact__box">
+            <ion-icon
+              name="caret-down-outline"
+              class="contact__icon"
+            ></ion-icon>
+            <p class="contact__address">
+              Address: 198 West 21th Street, Suite 721 New York NY 10016
+            </p>
+          </div>
+          <div class="contact__box">
+            <ion-icon name="call-outline" class="contact__icon"></ion-icon>
+            <div class="contact__phone">
+              <a href="tel:555-555-5555">555-555-5555</a>
+            </div>
+          </div>
+          <div class="contact__box">
+            <ion-icon
+              name="mail-unread-outline"
+              class="contact__icon"
+            ></ion-icon>
+            <div class="contact__mail">
+              <a href="mailto:name@email.com">johndoe@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact__box">
+            <ion-icon name="earth-outline" class="contact__icon"></ion-icon>
+            <p class="contact__url">Yoursite.com</p>
+          </div>
+        </div>
+        <form id="contact" action="" method="post">
+          <h3>Contact us for custom quote</h3>
+          <div class="contact__form">
+            <fieldset class="contact__fieldset">
+              <input placeholder="Your name" type="text" required autofocus />
+            </fieldset>
+            <fieldset class="contact__fieldset">
+              <input placeholder="Your Email Address" type="email" required />
+            </fieldset>
+            <fieldset class="contact__fieldset">
+              <input
+                placeholder="Your Phone Number (optional)"
+                type="tel"
+                required
+                class="tescik"
+              />
+            </fieldset>
+            <fieldset class="contact__fieldset">
+              <input
+                placeholder="Your Web Site (optional)"
+                type="url"
+                required
+              />
+            </fieldset>
+            <fieldset class="contact__fieldset">
+              <textarea
+                placeholder="Type your message here...."
+                required
+              ></textarea>
+            </fieldset>
+          </div>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit">
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
     <script src="app.js"></script>
     <script
       type="module"

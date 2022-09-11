@@ -32,6 +32,19 @@ a {
   display: grid;
 }
 
+.grid--3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  justify-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
 .grid-3 {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
@@ -284,7 +297,7 @@ a {
 }
 
 .work {
-  height: 80vh;
+  height: 90vh;
   max-width: 100%;
   background-image: url("photo2.jpg");
   background-size: cover;
@@ -307,7 +320,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-  padding: 5rem;
+  padding: 2rem;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -335,6 +348,7 @@ a {
   background-color: #f8f9f9;
   padding: 5rem 10rem;
   line-height: 1.6;
+  height: 80vh;
 }
 
 .operations__tab-container {
@@ -446,7 +460,70 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 18rem;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 5rem 3rem;
+  color: #03363d;
+}
+
+.service__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  gap: 2rem;
+}
+
+.service__header {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service__subtittle {
+  border-bottom: 2px solid #03363d;
+  padding: 1rem 0;
+}
+
+.service__btn {
+  display: inline-block;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  margin-top: 5rem;
+  padding: 1rem 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-bottom: none;
+  background-color: #26f006;
+  color: #ffffff;
+  font-weight: 700;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 1.6rem;
+}
+
+.service__btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.logo {
+  width: 100%;
+  height: auto;
 }
 
 .gallery {

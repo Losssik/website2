@@ -36,6 +36,15 @@ a {
 .grid {
   display: grid;
 
+  &--3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
   &-3 {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
@@ -246,7 +255,7 @@ a {
 }
 
 .work {
-  height: 80vh;
+  height: 90vh;
   max-width: 100%;
   background-image: url("photo2.jpg");
   background-size: cover;
@@ -258,7 +267,7 @@ a {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    padding: 5rem;
+    padding: 2rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -283,6 +292,7 @@ a {
   background-color: $white-dark;
   padding: 5rem 10rem;
   line-height: 1.6;
+  height: 80vh;
 }
 
 .operations__tab-container {
@@ -361,7 +371,53 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18rem;
+  gap: 2rem;
+  background-color: $white-light;
+  padding: 5rem 3rem;
+  color: $green-darrkest;
+
+  &__container {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 2rem;
+  }
+
+  &__header {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  &__subtittle {
+    border-bottom: 2px solid $green-darrkest;
+    padding: 1rem 0;
+  }
+
+  &__btn {
+    display: inline-block;
+    grid-column: 1/4;
+    margin-top: 5rem;
+    padding: 1rem 2rem;
+    align-self: center;
+    justify-self: center;
+    border-bottom: none;
+    background-color: #26f006;
+    color: $white-light;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    font-size: 1.6rem;
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}
+
+.logo {
+  width: 100%;
+  height: auto;
 }
 
 .gallery {

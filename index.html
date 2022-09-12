@@ -275,42 +275,27 @@
             <p class="contact__url">Yoursite.com</p>
           </div>
         </div>
-        <form id="contact" action="" method="post">
-          <h3>Contact us for custom quote</h3>
-          <div class="contact__form">
-            <fieldset class="contact__fieldset">
-              <input placeholder="Your name" type="text" required autofocus />
-            </fieldset>
-            <fieldset class="contact__fieldset">
-              <input placeholder="Your Email Address" type="email" required />
-            </fieldset>
-            <fieldset class="contact__fieldset">
-              <input
-                placeholder="Your Phone Number (optional)"
-                type="tel"
-                required
-                class="tescik"
-              />
-            </fieldset>
-            <fieldset class="contact__fieldset">
-              <input
-                placeholder="Your Web Site (optional)"
-                type="url"
-                required
-              />
-            </fieldset>
-            <fieldset class="contact__fieldset">
-              <textarea
-                placeholder="Type your message here...."
-                required
-              ></textarea>
-            </fieldset>
-          </div>
-          <fieldset>
-            <button name="submit" type="submit" id="contact-submit">
-              Submit
-            </button>
-          </fieldset>
+        <form id="contact" class="contact__form">
+          <h3 class="contact__header">Contact us for custom quote</h3>
+          <label class="contact__label" for="fullname">Your full name</label>
+          <input
+            id="test1"
+            class="contact__input"
+            type="text"
+            id="fullname"
+            autofocus
+          />
+          <label class="contact__label" for="mail">Your email</label>
+          <input
+            id="test2"
+            class="contact__input"
+            type="email"
+            id="mail"
+            required
+          />
+          <label class="contact__label" for="message">Your message</label>
+          <textarea id="message" class="contact__message" required></textarea>
+          <input id="test3" type="submit" value="submit" class="contact__btn" />
         </form>
       </div>
     </section>

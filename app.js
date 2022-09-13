@@ -1,14 +1,15 @@
-//////////////////////////////////////tabbed component/////////////////////////////////////////
-
 const tabs = document.querySelectorAll(".operations__tab");
 const tabsContainer = document.querySelector(".operations__tab-container");
 const tabsContent = document.querySelectorAll(".operations__content");
 const submitBtn = document.querySelector(".contact__btn");
-const test1 = document.querySelector("#test1");
-const test2 = document.querySelector("#test2");
-const test3 = document.querySelector("#test3");
+const fullname = document.querySelector("#fullname");
+const mail = document.querySelector("#mail");
+const msg = document.querySelector("#msg");
 const service = document.querySelector(".service__container");
+const popup = document.querySelector(".popup");
+const contact = document.querySelector(".contact");
 
+//////////////////////////////////////tabbed component/////////////////////////////////////////
 tabsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".operations__tab");
   console.log(clicked);
@@ -29,10 +30,39 @@ tabsContainer.addEventListener("click", function (e) {
     .classList.add("operations__content--active");
 });
 
+//////////////////////////////////////SUCCESS MESSAGE POPUP/////////////////////////////////////////
+const closePopup = function () {
+  popup.classList.add("hidden");
+};
+
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  service.classList.add("popup");
-  console.log("clicked");
+  if (
+    fullname.value === "" ||
+    fullname.value === null ||
+    mail.value === "" ||
+    mail.value === null ||
+    msg.value === "" ||
+    msg.value === null
+  ) {
+    const errorMessage = document.createElement("div");
+    errorMessage.innerHTML = "Please fill in all inputs!";
+    contact.appendChild(errorMessage);
+    errorMessage.style.backgroundColor = "red";
+    errorMessage.style.position = "fixed";
+    errorMessage.style.top = "50%";
+    errorMessage.style.left = "40%";
 
-  console.log(`${test1.value}`);
+    const closeErrorMessage = function () {
+      errorMessage.classList.add("hidden");
+    };
+
+    setTimeout(closeErrorMessage, 2000);
+  } else {
+    popup.classList.remove("hidden");
+    console.log("clicked");
+    setTimeout(closePopup, 2000);
+
+    console.log(`${msg.value}`);
+  }
 });

@@ -278,25 +278,21 @@
         <form id="contact" class="contact__form">
           <h3 class="contact__header">Contact us for custom quote</h3>
           <label class="contact__label" for="fullname">Your full name</label>
-          <input
-            id="test1"
-            class="contact__input"
-            type="text"
-            id="fullname"
-            autofocus
-          />
+          <input class="contact__input" type="text" id="fullname" autofocus />
           <label class="contact__label" for="mail">Your email</label>
-          <input
-            id="test2"
-            class="contact__input"
-            type="email"
-            id="mail"
-            required
-          />
+          <input class="contact__input" type="email" id="mail" required />
           <label class="contact__label" for="message">Your message</label>
-          <textarea id="message" class="contact__message" required></textarea>
-          <input id="test3" type="submit" value="submit" class="contact__btn" />
+          <textarea
+            id="msg"
+            id="message"
+            class="contact__message"
+            required
+          ></textarea>
+          <input type="submit" value="submit" class="contact__btn" />
         </form>
+        <div class="popup hidden">
+          <span class="popup__text">your message has been send</span>
+        </div>
       </div>
     </section>
     <script src="app.js"></script>

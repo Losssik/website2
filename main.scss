@@ -567,10 +567,23 @@ a {
 }
 
 .popup {
-  width: 200px;
-  height: 200px;
+  display: block;
+  width: 20rem;
+  height: 3rem;
   background-color: red;
-  position: absolute;
-  top: 50;
-  left: 50;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(37, 240, 6, 0.437);
+
+  &__text {
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: red;
+  }
+}
+
+.hidden {
+  display: none;
 }

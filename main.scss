@@ -496,6 +496,7 @@ a {
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
   }
 
   &__box {
@@ -586,4 +587,45 @@ a {
 
 .hidden {
   display: none;
+}
+
+.footer {
+  background-color: $white-light;
+  padding-top: 4rem;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: start;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  &__heading {
+    color: $green-darrkest;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+
+    &:hover {
+      color: #26f006;
+    }
+  }
 }

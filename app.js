@@ -30,7 +30,7 @@ tabsContainer.addEventListener("click", function (e) {
     .classList.add("operations__content--active");
 });
 
-//////////////////////////////////////SUCCESS MESSAGE POPUP/////////////////////////////////////////
+//////////////////////////////////////SUCCESS & FAIL MESSAGE POPUP/////////////////////////////////////////
 const closePopup = function () {
   popup.classList.add("hidden");
 };
@@ -64,5 +64,10 @@ submitBtn.addEventListener("click", function (e) {
     setTimeout(closePopup, 2000);
 
     console.log(`${msg.value}`);
+
+    //clearing input fields
+    fullname.value = "";
+    mail.value = "";
+    msg.value = "";
   }
 });

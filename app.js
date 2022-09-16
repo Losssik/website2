@@ -8,6 +8,8 @@ const msg = document.querySelector("#msg");
 const service = document.querySelector(".service__container");
 const popup = document.querySelector(".popup");
 const contact = document.querySelector(".contact");
+const submit = document.querySelector("#submit");
+const subscribeInput = document.querySelector("#subscribe");
 
 //////////////////////////////////////tabbed component/////////////////////////////////////////
 tabsContainer.addEventListener("click", function (e) {
@@ -69,5 +71,14 @@ submitBtn.addEventListener("click", function (e) {
     fullname.value = "";
     mail.value = "";
     msg.value = "";
+  }
+});
+
+submit.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (subscribeInput.value === "" || subscribeInput.value === "null") {
+    console.log("nothing inputed");
+  } else {
+    console.log("input complete");
   }
 });

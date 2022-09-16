@@ -591,7 +591,7 @@ a {
 
 .footer {
   background-color: $white-light;
-  padding-top: 4rem;
+  padding: 6rem 0;
   &__container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -628,4 +628,62 @@ a {
       color: #26f006;
     }
   }
+}
+
+.media {
+  padding-left: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  background-color: $white-dark;
+  color: $green-darrkest;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    column-gap: 4rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__link {
+    border-bottom: none;
+  }
+}
+
+ion-icon {
+  font-size: 4rem;
+  color: $green-darrkest;
+}
+
+.subscribe__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.subscribe__disclaimer {
+  font-size: 1rem;
+}
+
+.subscribe__btn:active {
+  transform: translateY(1px);
+}
+
+#yt:hover {
+  color: #ff0000;
+  transition: all 0.3s;
+}
+#tw:hover {
+  color: #1da1f2;
+  transition: all 0.3s;
+}
+#fb:hover {
+  color: #4267b2;
+  transition: all 0.3s;
+}
+#ig:hover {
+  color: #833ab4;
+  transition: all 0.3s;
 }
